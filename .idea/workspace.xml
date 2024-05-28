@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3233737-5fda-4f70-9858-336957f212c8" name="Changes" comment="" />
+    <list default="true" id="e3233737-5fda-4f70-9858-336957f212c8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +19,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -39,6 +44,7 @@
     "Application.ProductsFrame.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/facultate/An2/TP/PT2024_30224_Botanel_Mirona_Assignment3",
     "node.js.detected.package.eslint": "true",
@@ -83,7 +89,7 @@
       <workItem from="1716835671400" duration="17962000" />
       <workItem from="1716875699411" duration="3183000" />
       <workItem from="1716878966780" duration="172000" />
-      <workItem from="1716879168761" duration="2005000" />
+      <workItem from="1716879168761" duration="2607000" />
     </task>
     <servers />
   </component>
