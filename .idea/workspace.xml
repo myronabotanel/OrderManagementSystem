@@ -6,6 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e3233737-5fda-4f70-9858-336957f212c8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUI/ClientsFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUI/ClientsFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ReflectionExemple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ReflectionExemple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/GUI/ClientsFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ReflectionExemple.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/ReflectionExemple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$doc.doc" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,44 +48,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ClientsFrame.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainFrame.executor": "Run",
-    "Application.OrdersFrame.executor": "Run",
-    "Application.ProductsFrame.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/facultate/An2/TP/PT2024_30224_Botanel_Mirona_Assignment3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "E:/facultate/An2/TP/PT2024_30224_Botanel_Mirona_Assignment3/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ClientsFrame.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainFrame.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OrdersFrame.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductsFrame.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/facultate/An2/TP/PT2024_30224_Botanel_Mirona_Assignment3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/facultate/An2/TP/PT2024_30224_Botanel_Mirona_Assignment3/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example" />
     </key>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-corretto-21.0.2-4caba194b151-51586f01" />
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
-        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
-      </set>
-    </attachedChunks>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="PT2024_30224_Botanel_Mirona_Assignment3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -90,6 +109,8 @@
       <workItem from="1716875699411" duration="3183000" />
       <workItem from="1716878966780" duration="172000" />
       <workItem from="1716879168761" duration="2607000" />
+      <workItem from="1716892349048" duration="1026000" />
+      <workItem from="1738594526624" duration="86000" />
     </task>
     <servers />
   </component>

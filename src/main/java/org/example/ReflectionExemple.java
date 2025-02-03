@@ -1,30 +1,26 @@
 package org.example;
 
+import org.example.Model.Client;
+
 import java.lang.reflect.Field;
 
 /**
- * A class for retrieving properties of objects using reflection.
+ * A class for retrieving properties of Client objects using reflection.
  */
-public class ReflectionExemple
-{
+public class ReflectionExemple {
     /**
-     * Retrieves properties of the given object using reflection and prints them.
+     * Retrieves properties of the given Client object using reflection and prints them.
      *
-     * @param object The object whose properties are to be retrieved.
+     * @param client The Client object whose properties are to be retrieved.
      */
-    public static void retrieveProperties (Object object)
-    {
-        for(Field field : object.getClass().getDeclaredFields())
-        {
+    public static void retrieveProperties(Client client) {
+        for (Field field : client.getClass().getDeclaredFields()) {
             field.setAccessible(true);
             Object value;
-            try
-            {
-                value = field.get(object);
+            try {
+                value = field.get(client);
                 System.out.println(field.getName() + "=" + value);
-            }
-            catch (IllegalArgumentException | IllegalAccessException e)
-            {
+            } catch (IllegalArgumentException | IllegalAccessException e) {
                 e.printStackTrace();
             }
         }

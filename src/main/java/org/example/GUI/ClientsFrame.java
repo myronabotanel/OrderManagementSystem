@@ -2,6 +2,8 @@ package org.example.GUI;
 
 import org.example.BLL.ClientBLL;
 import org.example.Model.Client;
+import org.example.ReflectionExemple;
+
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -10,8 +12,8 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Field;
 import java.util.List;
-
 
 /**
  * The ClientsFrame class represents the graphical user interface for managing clients.
@@ -59,6 +61,7 @@ public class ClientsFrame extends JFrame {
         JButton findByIdButton = createStyledButton("Find By ID");
         JButton getAllIdsButton = createStyledButton("Get All IDs");
         JButton backButton = createStyledButton("Back"); // Back button added
+        JButton reflectButton = createStyledButton("Reflect"); // Reflect button added
 
         // Create panel for text fields and buttons
         JPanel inputPanel = new JPanel(new GridLayout(3, 2, 5, 5));
@@ -74,6 +77,7 @@ public class ClientsFrame extends JFrame {
         inputPanel.add(findByIdButton);
         inputPanel.add(getAllIdsButton);
         inputPanel.add(backButton); // Back button added
+        inputPanel.add(reflectButton); // Reflect button added
 
         // Add the input panel to the main panel
         getContentPane().add(inputPanel, BorderLayout.SOUTH);
@@ -172,6 +176,15 @@ public class ClientsFrame extends JFrame {
             }
         });
 
+        // Add action listener for the reflectButton
+        reflectButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Client client = new Client(0, nameField.getText(), emailField.getText(), addressField.getText());
+                ReflectionExemple.retrieveProperties(client);
+            }
+        });
+
         // Add a selection listener to the table
         table.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
@@ -195,6 +208,7 @@ public class ClientsFrame extends JFrame {
     /**
      * Populates the table with product data.
      */
+    // Populate the table with client data using reflection
     private void populateTable() {
         if (model.getColumnCount() == 0) {
             model.addColumn("ID");
@@ -204,10 +218,20 @@ public class ClientsFrame extends JFrame {
         }
         List<Client> clients = clientBLL.findAllClients();
         for (Client client : clients) {
-            Object[] rowData = {client.getId(), client.getName(), client.getEmail(), client.getAddress()};
+            Object[] rowData = new Object[model.getColumnCount()];
+            Field[] fields = client.getClass().getDeclaredFields();
+            for (int i = 0; i < fields.length; i++) {
+                fields[i].setAccessible(true);
+                try {
+                    rowData[i] = fields[i].get(client);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
             model.addRow(rowData);
         }
     }
+
 
     /**
      * Refreshes the table with updated order data.
@@ -217,20 +241,23 @@ public class ClientsFrame extends JFrame {
         populateTable();
     }
 
-    // Method for creating a styled button
-    /**
-     * Creates a styled button with the specified text.
-     *
-     * @param text The text to display on the button.
-     * @return The styled JButton object.
-     */
-    private JButton createStyledButton(String text) {
-        JButton button = new JButton(text);
-        button.setBackground(new Color(52, 152, 219)); // Set background color
-        button.setForeground(Color.WHITE); // Set text color
-        button.setFocusPainted(false); // Remove focus effect
-        button.setFont(new Font("Arial", Font.BOLD, 16)); // Set font and text size
-        button.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // Set margins
-        return button;
-    }
+// Method for creating a styled button
+/**
+ * Creates
+ // Method for creating a styled button
+ /**
+ * Creates a styled button with the specified text.
+ *
+ * @param text The text to display on the button.
+ * @return The styled JButton object.
+ */
+private JButton createStyledButton(String text) {
+    JButton button = new JButton(text);
+    button.setBackground(new Color(52, 152, 219)); // Set background color
+    button.setForeground(Color.WHITE); // Set text color
+    button.setFocusPainted(false); // Remove focus effect
+    button.setFont(new Font("Arial", Font.BOLD, 16)); // Set font and text size
+    button.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // Set margins
+    return button;
+}
 }
