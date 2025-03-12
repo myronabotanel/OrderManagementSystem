@@ -35,7 +35,5 @@ Order Management System is a Java application that allows managing clients, prod
 
 ## 🖼️ Screenshots
 
-![Screenshot 1](path_to_screenshot1.png)
-![Screenshot 2](path_to_screenshot2.png)
 
 
